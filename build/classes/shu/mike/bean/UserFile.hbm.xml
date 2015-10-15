@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-8-17 19:49:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="shu.mike.bean.UserFile" table="USERFILE">
+        <id name="fileUUID" type="java.lang.String">
+            <column name="FILEUUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="userUUID" type="java.lang.String">
+            <column name="USERUUID" />
+        </property>
+        <property name="fileName" type="java.lang.String">
+            <column name="FILENAME" />
+        </property>
+        <property name="fileSize" type="int">
+            <column name="FILESIZE" />
+        </property>
+        <property name="fileRemark" type="java.lang.String">
+            <column name="FILEREMARK" />
+        </property>
+        <property name="isPublic" type="boolean" access="field">
+            <column name="ISPUBLIC" />
+        </property>
+        <property name="isNeedPwd" type="boolean" access="field">
+            <column name="ISNEEDPWD" />
+        </property>
+        <property name="passWord" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="md5" type="java.lang.String">
+            <column name="MD5" />
+        </property>
+    </class>
+</hibernate-mapping>

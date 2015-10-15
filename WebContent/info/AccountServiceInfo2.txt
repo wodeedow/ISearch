@@ -1,0 +1,4 @@
+operationType
+	getInfo :请求Account信息
+	setInfo：设置
+	setPassword：

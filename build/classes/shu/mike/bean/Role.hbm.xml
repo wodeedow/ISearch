@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-8-17 19:49:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="shu.mike.bean.Role" table="ROLE">
+        <id name="roleID" type="java.lang.String">
+            <column name="ROLEID" />
+            <generator class="uuid" />
+        </id>
+        <property name="roleName" type="java.lang.String">
+            <column name="ROLENAME" />
+        </property>
+        <property name="roleNote" type="java.lang.String">
+            <column name="ROLENOTE" />
+        </property>
+    </class>
+</hibernate-mapping>

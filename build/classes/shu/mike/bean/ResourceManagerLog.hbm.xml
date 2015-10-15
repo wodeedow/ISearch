@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-8-21 20:32:50 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="shu.mike.bean.ResourceManagerLog" table="RESOURCEMANAGERLOG">
+        <id name="randomUUID" type="java.lang.String">
+            <column name="RANDOMUUID" />
+            <generator class="uuid" />
+        </id>
+        <property name="fileUUID" type="java.lang.String">
+            <column name="FILEUUID" />
+        </property>
+        <property name="userUUID" type="java.lang.String">
+            <column name="USERUUID" />
+        </property>
+        <property name="typeCode" type="java.lang.String">
+            <column name="TYPECODE" />
+        </property>
+        <property name="loadDate" type="java.util.Date">
+            <column name="LOADDATE" />
+        </property>
+        <property name="fileName" type="java.lang.String">
+            <column name="FILENAME" />
+        </property>
+        <property name="reMark" type="java.lang.String">
+            <column name="REMARK" />
+        </property>
+        <property name="ip" type="java.lang.String">
+            <column name="IP" />
+        </property>
+        <property name="browser" type="java.lang.String">
+            <column name="BROWSER" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="province" type="java.lang.String">
+            <column name="PROVINCE" />
+        </property>
+        <property name="x" type="java.lang.String">
+            <column name="X" />
+        </property>
+        <property name="y" type="java.lang.String">
+            <column name="Y" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+  	<constant name="struts.i18n.encoding" value="UTF-8" /> 
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.ui.theme" value="simple" /> 
+	<constant name="struts.ui.templateDir" value="template" /> 
+	<constant name="struts.ui.templateSuffix" value="ftl" /> 
+	<constant name="struts.multipart.maxSize" value="15000000"></constant> 
+	<constant name="struts.action.extension" value="action"></constant>
+    <package name="default"  extends="struts-default"> 
+    <interceptors>
+    	<interceptor name="LoginCheckInterceptor" class="shu.mike.struts2.LoginCheckInterceptor"/>
+    	<interceptor name="CommonAdminCheckInterceptor" class="shu.mike.struts2.CommonAdminCheckInterceptor"/>
+    	<interceptor name="SuperAdminCheckInterceptor" class="shu.mike.struts2.SuperAdminCheckInterceptor"/>
+    	<interceptor-stack name="LoginStack">
+    		<interceptor-ref name="LoginCheckInterceptor"/>
+    		<interceptor-ref name="defaultStack"/>
+    	</interceptor-stack>
+    	<interceptor-stack name="CommonAdminCheckStack">
+    		<interceptor-ref name="CommonAdminCheckInterceptor"/>
+    		<interceptor-ref name="defaultStack"/>
+    	</interceptor-stack>
+    	<interceptor-stack name="SuperAdminCheckStack">
+    		<interceptor-ref name="SuperAdminCheckInterceptor"/>
+    		<interceptor-ref name="defaultStack"/>
+    	</interceptor-stack>
+     </interceptors>
+ 
+     <global-results> 
+     	 <result name="error" type="redirect">/error.jsp</result>
+     	 <result name="login" type="redirect">/login.html</result>	
+     </global-results>
+        <action name="login" class="shu.mike.actionset.LoginAction" method="execute"  >
+            <result name="success" type="redirect">/disk.jsp</result> 
+        </action>
+		<action name="register" class="shu.mike.actionset.RegisterAction" method="registerUser" >
+            <result name="success" type="redirect">/checkmail.jsp</result>        
+        </action>
+        <action name="activateAccount" class="shu.mike.actionset.RegisterAction" method="activateAccount" >
+            <result name="success" type="redirect">/register_success.jsp</result>         
+        </action>
+        <action name="ViewFiles" class="shu.mike.actionset.DownloadFileAction" method="getRealPathByUUID">
+            <result name="success" type="redirect">/disk.jsp</result>       
+        </action>
+		<action name="ListDirectoryFiles" class="shu.mike.actionset.ListDirectoryFilesAction" >
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+            <interceptor-ref name="LoginStack"/>     
+        </action>
+		<action name="FileManage" class="shu.mike.actionset.FileManageAction" method="execute"  >
+            <result name="success">disk.jsp</result>  
+            <interceptor-ref name="LoginStack"/>       
+        </action>
+		<action name="Search" class="shu.mike.actionset.SearchAction"  method="execute" >
+            <result name="success" >/disk.jsp</result>   
+        </action>
+		<action name="publicSearch" class="shu.mike.actionset.SearchAction"  method="publicSearch" >
+            <result name="success">/result.jsp</result>        
+        </action>
+        <action name="privateSearch" class="shu.mike.actionset.PrivateSearchAction">
+            <result name="success">/privateresult.jsp</result>        
+        </action>
+        <action name="logout" class="shu.mike.actionset.LogoutAction" >
+            <result name="success" type="redirect">/index.html</result>        
+        </action>
+        <action name="viewCenter" class="shu.mike.actionset.ViewPersonalCenterAction">
+            <result name="activateAccount" type="redirect">checkmail.jsp</result>        
+            <result name="superAdminCenter" type="redirect">/superAdminCenter.jsp</result>  
+            <result name="commonAdminCenter" type="redirect">/commonAdminCenter.jsp</result>  
+            <result name="commonUser" type="redirect">/commonUserCenter.jsp</result>  
+        </action>
+        <action name="fileupload" class="shu.mike.actionset.UploadFileAction" method="execute"  >	
+			<param name="savePath">/upload</param>
+			<param name="contentType">text/html</param>   
+            <result name="success" type="redirect">/disk.jsp</result> 
+            <result name="input">/disk.jsp</result>  
+        </action>
+		
+		<!--                         下载的action不论是否登录都能下载                      -->
+		 <action name="download" class="shu.mike.actionset.DownloadFileAction">
+            <result name="success" type="stream">
+                 <param name="contentType">application/octet-stream;charset=UTF-8</param>
+				 <param name="contentDisposition">attachment;filename="${fileName}"</param>
+				 <param name="inputName">inputStream</param>
+                 <param name="bufferSize">2048</param>
+             </result>
+         </action>
+		 <!--                 以下操作是超级管理员才能执行的action   SuperAdminCheckStack            -->
+         <action name="ontoManager" class="shu.mike.actionset.OntoManagerAction">
+         	<result type="stream">
+         		<param name="contentType">text/html</param>
+         		<param name="inputStream">inputStream</param>
+         	</result>
+			 <interceptor-ref name="SuperAdminCheckStack"/>
+         </action>
+         <action name="serverManage" class="shu.mike.manage.ServerManageAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+			<interceptor-ref name="SuperAdminCheckStack"/>
+		</action>
+        <action name="paramManage" class="shu.mike.manage.ParamManageAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+			<interceptor-ref name="SuperAdminCheckStack"/>
+		</action>
+		 <action name="modifyManage" class="shu.mike.manage.ModifyParamAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+			<interceptor-ref name="SuperAdminCheckStack"/>
+		</action>
+		<action name="modifyServer" class="shu.mike.manage.ModifyServerAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+			<interceptor-ref name="SuperAdminCheckStack"/>
+		</action>
+		<action name="addServer" class="shu.mike.manage.AddServerAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+			<interceptor-ref name="SuperAdminCheckStack"/>
+		</action>
+		<action name="deleteServer" class="shu.mike.manage.DeleteServerAction">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputStream">inputStream</param>
+			</result>
+			<interceptor-ref name="SuperAdminCheckStack"/>
+		</action>
+    </package>
+</struts>
+

@@ -1,0 +1,471 @@
+
+/* --------------Reset--------------------------- */
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section, summary,
+	time, mark, audio, video {
+	    margin: 0;
+	    padding: 0; 
+	    border: 0;
+	    outline: 0;
+	    font-size: 100%;
+	    vertical-align: baseline;
+	    background: transparent;
+	}
+
+	article,aside,details,figcaption,figure,
+	footer,header,hgroup,menu,nav,section { display: block; }
+
+	*,
+	*:after,
+	*:before {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	nav ul,
+	nav ol {
+	    list-style: none;
+	    list-style-image: none;
+	}
+
+	ul { list-style: none outside;    }
+	ol { list-style-position: inside; }
+
+	a {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 100%;
+		outline: none;
+		text-decoration: none;
+	    background: transparent;
+		vertical-align: baseline;
+	}
+
+	a, a > * {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:hover {
+		color: #00c2a9;
+	}
+
+	.not-ie a {
+		-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+				transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	}
+
+	img {
+	    border: 0;
+		height: auto;
+		max-width: 100%;
+		-ms-interpolation-mode: bicubic;
+	}
+/* --------------body---------------------------- */
+	body {
+		width: 100%;
+		min-height: 568px;
+		background: transparent;
+		/*background-repeat: no-repeat;
+		background-position: center bottom;
+		background-color: #fff;*/
+		color: #777;
+		font-weight: 300;
+		font-size: 15px;
+		font-family: 'Roboto', sans-serif;
+		line-height: 1.75em;
+	}
+	.divbig{
+		margin-left: auto;
+		margin-right: auto;
+    }
+	.box{
+		width: 1180px;
+		height: 80px;
+		position: relative;
+		margin: 0px 0 0;
+	}
+	p {
+		margin: 0 0 1.5em;
+		padding: 0;
+		line-height: 1.75em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 15px;
+		color: #5b5e60;
+		font-family: 'Roboto', sans-serif;
+		line-height: 1.3em;
+		font-weight: normal;
+	}
+
+	h1 { font-size: 30px; }
+	h2 { font-size: 24px; }
+	h3 { font-size: 20px; }
+	h4 { font-size: 18px; }
+	h5 { font-size: 16px; }
+	h6 { font-size: 14px; }
+/* --------------header-------------------------- */
+	#header {
+		position: relative;
+		top: 0;
+		z-index: 99;
+		width: 1360px;
+		background-color: #72D5C8;
+		line-height: 0;
+		height: 60px;
+	}
+	.header-in {
+		margin-left: 15px;
+		width: 95%;
+		text-align: justify;
+	}
+	.header-in:after {
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
+		content: "";
+	}
+
+	#logo,
+	#navigation {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#logo {
+		margin-bottom: 0;
+		font-family: 'Julius Sans One', sans-serif;
+		padding-left: 5px;
+		padding-top: 3px;
+	}
+	#logo_img {
+		float: left;
+		padding-top: 6px;
+		margin-left: 20px;
+	}
+	#header .login {
+		cursor:pointer;
+	}
+/* --------------Main Navigation----------------- */
+	.navigation > ul > li {
+		position: relative; 
+		display: block;
+		float: left;
+		width: 120px;
+	}
+	.navigation > ul > li > a,
+	.navigation > ul > li > div {
+		text-align: center;
+		display: block;
+		margin: 0;
+		padding: 20px 0px 25px;
+		color: #73807F;
+		font-size: 14px;
+		line-height: 1em;
+	}
+	.navigation a,
+	.navigation div { 
+		font-weight: 300;
+		font-family: 'Roboto', sans-serif;
+	}
+	.navigation > ul > li:hover > a,
+	.navigation > ul > li:hover > div,
+	.navigation > ul > .current-menu-item > a,
+	.navigation > ul > .current_page_item > a,
+	.navigation > ul > .current-menu-item > div,
+	.navigation > ul > .current_page_item > div { 
+		background-color: rgba(60, 104, 98, 0.22);
+		color: #fff;
+		text-decoration: none;
+	}
+
+	
+	#nav li ul {line-height: 27px;  list-style-type: none;text-align:left;left: -999em; width: 180px; position: absolute;}
+	#nav li ul li{float: left; background:rgba(0,0,0, .2);}
+
+	#nav li ul a{display: block; width: 120px;text-align:center; padding-top: 15px; padding-bottom: 13px; overflow:hidden;}
+
+	#nav li ul a:link  {color:#666; text-decoration:none;}
+	#nav li ul a:visited  {color:#666;text-decoration:none;}
+	#nav li ul a:hover  {color:#F3F3F3;text-decoration:none;font-weight:normal;background:#51726D;}
+
+	#nav li:hover ul {left: auto;}
+	#nav li.sfhover ul {left: auto;}
+
+	#nav #SPAN_USER_ID{height: 60px;}
+/* --------------LeftSide-------------------------- */
+	#leftside{
+		position: absolute;
+		top: 0;
+		text-align: center;
+	    width: 100px;
+	    height: 638px;
+	    background: #fff;
+	    border-bottom: 1px solid #72D5C8;
+	    border-left: 1px solid #72D5C8;
+	}
+	#leftside div{
+		margin: 2px 0 8px;
+		/*padding: 5px 10px 2px 10px;
+		border-right: 2px solid #289C8D;
+		border-left: 2px solid #289C8D;
+		border-top: 2px solid #289C8D;*/
+	}
+	#leftside h4{
+		margin: 5px 5px 2px;
+		font-family:"瀵邦喛钂嬮梿鍛寸拨";
+		font-size: 15px;
+		color: #289C8D;
+		padding: 5px 0px 5px;
+		border-bottom: 1px solid #289C8D;
+	}
+	#leftside ul li a{color:#00c2a9;}
+	#leftside ul li a:hover {color: #808b8d;}
+
+	/* --------------Side Navigation----------------- */
+		.navigation_side > ul > li > a {
+			display: block;
+			margin: 0;
+			padding: 20px 10px;
+			font-size: 14px;
+		}
+		.navigation_side > ul > li:hover > a,
+		.navigation_side > ul > li:hover > div,
+		.navigation_side > ul > .current-menu-item > a,
+		.navigation_side > ul > .current_page_item > a,
+		.navigation_side > ul > .current-menu-item > div,
+		.navigation_side > ul > .current_page_item > div { 
+			border-left: 7px solid #72D5C8;
+			background-color: rgba(144, 228, 216, 0.21);
+			text-decoration: none;
+		}
+/* --------------Search-------------------------- */
+	#search{
+		position: absolute;
+		z-index: 9;
+		top: 0;
+	    padding-left: 60px;
+		/*padding-left:20%;
+		padding-right:20%;*/
+	}
+	#searchform { 
+		position: relative;
+	    padding-left: 180px;
+	    top: 8px;
+	}
+	#searchform input[type="text"] { 
+		padding-right: 60px;			/*鏉堟挸鍙嗗鍡樺付閸掞拷*/
+		/*font-style: italic;*/
+		font-size: 15px;
+	}
+	#searchform .submit-search {
+		position: absolute;
+		top: 0;
+		left: 573px;					/*閹兼粎鍌ㄩ幐澶愭尦娴ｅ秶鐤�*/
+		padding: 0;
+		width: 55px;
+		height: 40px;
+		border-left: 1px solid rgba(156, 156, 156, 1);
+		text-align: center;
+	}
+	#searchform input[type="text"]:focus + .submit-search {
+		border-left-color: #00c2a9;
+	}
+	/* -------------------------------------------------- */
+	/*	Forms
+	/* -------------------------------------------------- */
+	#searchform button,input {
+		margin: 0;
+		border: none;
+		vertical-align: baseline;
+		font-size: 100%;
+	}
+	#searchform button {
+		display: inline-block;
+		padding: 6px 13px;
+		outline: none;
+		background-color: transparent;
+		color: #289C8D;
+		vertical-align: baseline;
+		text-align: center;
+		text-decoration: none;
+		font: 11px/1.5 Arial;
+		cursor: pointer;
+	}
+	#searchform input[type="text"]
+	{
+		/*font-style: italic;*/
+		font-size: 15px;
+		width:450px;
+		height:40px;
+		display: inline-block;
+		padding: 16px 10px;
+		padding-right: 62px;			/*鏉堟挸鍙嗗鍡樺付閸掞拷*/
+		outline: none;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #dcdcdc;
+		border-color: rgba(156, 156, 156, 1);
+		background-color: rgba(255, 255, 255, 0.37);
+		color: #289C8D;
+		font-family: 'Roboto', sans-serif;
+		
+		-webkit-border-radius: 6px;
+				border-radius: 6px;
+		-webkit-box-shadow: none;
+				box-shadow: none;
+		-webkit-appearance: none;
+				appearance: none;
+
+
+	}
+	#searchform input[type="text"]:focus,input[type="password"]:focus {
+		border-color: #00c2a9; 
+	}
+/* --------------FileGrid-------------------------- */
+	#changeButton{
+		position: absolute;
+		z-index: 999;
+		top: 10px;
+		right: 10px;
+		border-radius: 240px;
+		box-shadow: inset 0 1px 1px rgba(255,255,255,.5),0 1px 2px rgba(0,0,0,.2);
+		width: 60px;
+		line-height: 60px;
+		height: 60px;
+		font-size: 18px;
+		font-weight: bold;
+		background: #EEE;
+		color: #666;
+		text-align: center;
+	}
+	#changeButton:hover {
+		background-color:#d8d8d8;
+		cursor: pointer;
+	}
+    #fileGrid{
+    	/*position: absolute;
+    	top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0px 110px;*/
+        position: absolute;
+    	top: 0;
+        width: 1080px;
+        height: 638px;
+        margin: 0px 0px 0px 100px;
+        border-bottom: 1px solid #72D5C8;
+		border-right: 1px solid #72D5C8;
+        background: #fff;
+    }
+    #searchSide{
+    	position: absolute;
+    	top: 0px;
+    	width: 1080px;
+    	height: 638px;
+    	padding-top: 20px;
+    	margin-left: 100px;
+    	border-bottom: 1px solid #72D5C8;
+	    border-right: 1px solid #72D5C8;
+    }
+     #searchSide p,h3{text-align: center;}
+   	 #more{margin-top:-50px; margin-right: 60px; float:right; color: #000;} 
+   	 #more:hover{cursor: pointer;}
+     #searchSide .list-group,h4{
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+     .abstract {
+	background: rgba(200, 67, 215, 0.2);
+	padding: 10px 10px;
+	-webkit-border-radius: 6px;
+		border-radius: 6px;
+	}
+	 #searchSide p{color: rgb(139, 123, 123);}
+	 #searchSide h3{font-weight: 800;}
+	 #searchSide h4{font-weight: 800;}
+/* --------------閫傚簲涓嶅悓鍒嗚鲸鐜� -----------------*/
+	@media screen and (min-width:1200px){  
+		#header, .divbig, .box{
+		width: 1180px;
+		}
+		#searchSide{
+    	width: 1080px;
+   		}
+	}  
+	@media screen and (min-width: 960px) and (max-width: 1199px) {
+		#header, .divbig, .box{
+		width: 940px;
+		height: 120px;
+		}
+		#search{
+		top: 60px;
+	    left: -180px;
+		}
+		#searchSide, #fileGrid{
+    	width: 840px;
+    	margin-left: 100px;
+   		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 959px) {
+		#header, .divbig, .box{
+		width: 748px;
+		height: 120px;
+		}
+		#search{
+		top: 60px;
+	    left: -180px;
+		}
+		#searchSide, #fileGrid{
+    	width: 648px;
+    	margin-left: 100px;
+   		}
+	}
+	@media only screen and (max-width: 767px){
+		#header, .divbig, .box{
+			width: 460px;
+			height: 160px;
+		}
+		.navigation > ul > li {
+			top: 55px;
+			width: 153px;
+		}
+		#nav li ul a{
+			width: 153px;
+		}
+		.header-in {
+			margin-left: 0px;
+			width: 100%;
+			text-align: justify;
+		}
+		#search{
+			top: 45px;
+		    left: -210px;
+		}
+		#searchform input[type="text"]{
+			width:400px;
+		}
+		#searchform .submit-search {
+			left: 523px;
+		}
+		#searchSide, #fileGrid{
+	    	width: 360px;
+	    	margin-left: 100px;
+   		}
+   		 #searchSide p,h3{text-align: center;}
+   		 #more{margin-top:-50px; margin-right: 60px; float:right; color: #000;}
+   		 #more:hover{cursor: pointer;}
+	}

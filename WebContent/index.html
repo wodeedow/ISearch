@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ISearch</title>
+	<meta name="description" content="搜索引擎">
+	<meta name="author" content="Woohao,Zhangminghu">
+	<link rel="shortcut icon" href="images/ISearch_Logo.png">
+	<link rel="stylesheet" href="css/style_index.css" />
+	<script type="text/javascript" src="js/tool.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/index.js"></script> 
+</head>
+
+<body>
+<!-- - - - - - - - - - - - - - header - - - - - - - - - - - - - - - - -->
+<header id="header">
+	<div class="header-in">
+		<h1 id="logo"><a href="iSearch_INDEX.html">ISearch</a></h1>
+		<a href="iSearch_WEB.html">
+		</a>
+		<nav id="navigation" class="navigation">
+			<ul>
+				<li class="current-menu-item"><a href="index.html">主页</a></li>
+				<li><a href="disk.jsp">网盘</a></li>  
+				<li><a href="extractfiles.jsp">提取文件</a></li>  
+				<li><div class="login">登录</div></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<!-- - - - - - - - - - - - - - Search - - - - - - - - - - - - - - - - -->
+<div id="search">
+	<div id="search_logo">
+		<img src=images/ISearch_Logo_big.png>
+	</div>
+	<form action="publicSearch.action" id="searchform" method="post">
+		<p>
+			<input placeholder="点此输入搜索内容" type="text" name="searchValue">
+			<button class="submit-search" type="submit">ISearch</button>
+		</p>
+	</form>	
+</div>
+<!-- - - - - - - - - - - - - - Login - - - - - - - - - - - - - - - - -->
+<div id="login">
+	<div class="message warning">
+		<div class="inset">
+			<div class="login-head">
+				<h1>登录 iSearch</h1>
+				<div class="close"> </div> 			
+			</div>
+			<form action="login.action" method="post">
+				<li>
+					<input type="text" class="text" id="loginIdentity"name="identity"><a href="#" class=" icon user"></a>
+				</li>
+					<div class="clear"> </div>
+				<li>
+					<input type="password" id="loginPassword" name="password"> <a href="#" class="icon lock"></a>
+				</li>
+				<div class="clear"> </div>
+				<div class="submit">
+					<input type="submit" onclick="return loginCheckFunction();" value="登 录" >
+					<h4><a href="register.html">注册iSearch帐号</a></h4>
+					<div class="clear">  </div>	
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="clear"> </div>
+</div>
+<div id="screen"></div>
+<!-- - - - - - - - - - - - - - End - - - - - - - - - - - - - - - - -->
+</body>
+</html>

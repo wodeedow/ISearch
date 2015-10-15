@@ -1,0 +1,6 @@
+operationType
+	getLoginLogTable //显示loginLog 表格
+		pageIndex 页面索引
+	getUploadLogTable
+	 pageIndex
+	getDownloadlog

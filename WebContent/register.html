@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>注册ISearch</title>
+	<meta name="description" content="搜索引擎">
+	<meta name="author" content="Woohao,Zhangminghu">
+	<link rel="shortcut icon" href="images/ISearch_Logo.png">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style_register.css" /> 
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript"  charset="utf-8" src="js/register.js" ></script>
+	<script type="text/javascript" src="js/tool.js"></script>
+	<script type="text/javascript" src="js/base.js"></script> 
+	<script type="text/javascript" src="js/index.js"></script>
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+<!-- - - - - - - - - - - - - - header - - - - - - - - - - - - - - - - -->
+<header id="header">
+	<div class="header-in">
+		<h1 id="logo"><a href="index.html">ISearch</a></h1>
+		<a href="iSearch_WEB.html">
+			<img id="logo_img" src="images/ISearch_Logo_min.png" width="50" height="50" />
+		</a>
+		<nav id="navigation" class="navigation">
+			<ul>
+				<li class="current-menu-item"><a href="index.html">主页</a></li>
+				<li><a href="disk.jsp">网盘</a></li>
+				<li><div class="login">登录</div></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<!-- - - - - - - - - - - - - - Login - - - - - - - - - - - - - - - - -->
+<div id="login">
+	<div class="message warning">
+		<div class="inset">
+			<div class="login-head">
+				<h1>登录 iSearch</h1>
+				<div class="close"> </div> 			
+			</div>
+			<form action="login.action" method="post">
+				<li>
+					<input type="text" class="text" ><a href="#" class=" icon user"></a>
+				</li>
+					<div class="clear"> </div>
+				<li>
+					<input type="password"> <a href="#" class="icon lock"></a>
+				</li>
+				<div class="clear"> </div>
+				<div class="submit">
+					<input type="submit" onclick="myFunction()" value="登 录" >
+					<h4><a href="#">注册iSearch帐号</a></h4>
+					<div class="clear">  </div>	
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="clear"> </div>
+</div>
+<div id="screen"></div>
+<!-- - - - - - - - - - - - - - Register - - - - - - - - - - - - - - - - -->
+<div id="register">
+	<h1 class="register-head">Welcome to register ISearch</h1>
+	<form id="registerForm" class="container" action="register.action" method="post">
+
+		<div class="form-group">
+			<label for="userName" >用户名 : </label>
+			<input type="text" class="form-control" id="userName"  name="userName"  onBlur="checkUserName();" placeholder="输入用户名">
+		</div>
+
+		<div class="form-group">
+			<label for="password">密码 : </label>
+			<input type="password" class="form-control" id="password"  name="password" placeholder="输入6~20位密码">
+		</div>
+
+		<div class="form-group">
+			<label for="Password2">重复密码 : </label>
+			<input type="password" class="form-control" id="password2" onBlur="checkPassword();" placeholder="重复您刚刚输入的密码">
+		</div>
+
+		<div class="form-group sexbox">
+			<label for="Sexbox">性别 : </label>
+			<label class="radio-inline">
+				<input type="radio" name="sex" id="sex" value="男"> 男 
+			</label>
+			<label class="radio-inline" id="female">
+				<input type="radio" name="sex" id="sex" value="女"> 女
+			</label>
+		</div>
+		</br> 
+
+		<div class="form-group">
+			<label for="ContactInfo">邮箱 : </label>
+			<input type="email" class="form-control" id="email"  onBlur="checkUserEmail();"name="email"  placeholder="输入常用邮箱地址（用于找回密码）">
+		</div>
+
+		<div class="form-group">
+			<label for="organizations">学校、公司、其他 : </label>
+			<input type="text" class="form-control" id="organizations"  name="organizations" placeholder="输入您的公司或工作单位，这不是必须的">
+		</div>
+		<div class="btn-group btn-group-vertical btn-group-justified"
+						role="group" aria-label="..."> 
+			<div class="btn-group" role="group">
+					<button type="button" onclick="return checkValue();" class="btn btn-primary">注 册</button>
+			</div>
+		</div>
+		
+	</form>
+</div>
+<!-- - - - - - - - - - - - - - End - - - - - - - - - - - - - - - - -->
+</body>
+</html>

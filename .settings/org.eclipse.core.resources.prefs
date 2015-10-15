@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebContent/css/manage.css=UTF-8
+encoding//WebContent/css/style_center.css=UTF-8
+encoding//WebContent/css/style_index.css=UTF-8
+encoding//WebContent/css/style_register.css=UTF-8
+encoding//WebContent/css/style_register_success.css=UTF-8
+encoding//WebContent/css/style_result.css=UTF-8
+encoding//src/shu/mike/actionset/DownloadFileAction.java=UTF-8
+encoding//src/shu/mike/lucene/FileToText.java=UTF-8
+encoding//src/shu/mike/lucene/QueryThread.java=UTF-8
+encoding//src/shu/mike/lucene/ServerStart.java=UTF-8

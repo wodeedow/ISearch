@@ -1,0 +1,5 @@
+package shu.mike.DAO;
+
+public enum UserFileField {
+	USERUUID,FILENAME,ISPUBLIC,ISNEEPWD,PASSWORD,FILEREMARK
+}

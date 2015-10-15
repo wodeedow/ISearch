@@ -1,0 +1,3 @@
+operationType
+	getSharedFileInfo :请求所有用户共享文件
+	shareFile:创建文件分享

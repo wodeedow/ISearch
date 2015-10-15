@@ -1,0 +1,24 @@
+#ontoEditer {
+	width: 1200px;
+	height: 600px;
+	padding-left: 60px;
+	margin: right;
+	/*padding-left:20%;
+		padding-right:20%;*/
+}
+
+.node circle {
+	fill: yellow;
+	stroke: steelblue;
+	stroke-width: 1.5px;
+}
+
+.node {
+	font: 10px sans-serif;
+}
+
+.link {
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 3px;
+}

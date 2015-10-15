@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-8-17 19:49:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="shu.mike.manage.ManageInfo" table="MANAGEINFO">
+        <id name="randomUUID" type="java.lang.String">
+            <column name="RANDOMUUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="serverNum" type="int">
+            <column name="SERVERNUM" />
+        </property>
+        <property name="port" type="int">
+            <column name="PORT" />
+        </property>
+        <property name="pageMaxSize" type="int">
+            <column name="PAGEMAXSIZE" />
+        </property>
+        <property name="totalHits" type="int">
+            <column name="TOTALHITS" />
+        </property>
+        <property name="searchMaxItem" type="int">
+            <column name="SEARCHMAXITEM" />
+        </property>
+        <property name="defaultCapacity" type="int">
+            <column name="DEFAULTCAPACITY" />
+        </property>
+        <property name="loginLogMaxSize" type="int">
+            <column name="LOGINLOGMAXSIZE" />
+        </property>
+        <property name="ResourceManagerLogMaxSize" type="int">
+            <column name="RESOURCEMANAGERLOGMAXSIZE" />
+        </property>
+        <property name="defaultPermissionLevel" type="java.lang.String">
+            <column name="DEFAULTPERMISSIONLEVEL" />
+        </property>
+        <property name="downloadName" type="java.lang.String">
+            <column name="DOWNLOADNAME" />
+        </property>
+        <property name="EmailAccountUserName" type="java.lang.String">
+            <column name="EMAILACCOUNTUSERNAME" />
+        </property>
+        <property name="EmailAccountPassWord" type="java.lang.String">
+            <column name="EMAILACCOUNTPASSWORD" />
+        </property>
+        <property name="EmailAccountSmtpHost" type="java.lang.String">
+            <column name="EMAILACCOUNTSMTPHOST" />
+        </property>
+    </class>
+</hibernate-mapping>

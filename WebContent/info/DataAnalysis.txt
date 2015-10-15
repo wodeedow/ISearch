@@ -1,0 +1,6 @@
+operationType
+	GET_SEARCH_TIMES :搜索次数比较
+	frequencyAnalysis:词频分析
+	timesMapAnalysis:ip地理位置分析
+	loginLogAnalysis:登录日志图表分析
+	uploadLogAnalysis：上传日志图表分析

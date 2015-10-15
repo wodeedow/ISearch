@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-8-17 19:49:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="shu.mike.manage.SearchServer" table="SEARCHSERVER">
+        <id name="randomUUID" type="java.lang.String">
+            <column name="RANDOMUUID" />
+            <generator class="uuid" />
+        </id>
+        <property name="serverName" type="java.lang.String">
+            <column name="SERVERNAME" />
+        </property>
+        <property name="serverIP" type="java.lang.String">
+            <column name="SERVERIP" />
+        </property>
+        <property name="reMark" type="java.lang.String">
+            <column name="RENARK" />
+        </property>
+    </class>
+</hibernate-mapping>

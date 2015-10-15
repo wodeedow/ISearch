@@ -1,0 +1,247 @@
+	a {
+	}
+
+	a, a > * {
+	}
+/* --------------header-------------------------- */
+	#header {
+		background-color: #72D5C8;
+		line-height: 0;
+		height: 60px;
+	}
+	.header-in {
+		text-align: justify;
+	}
+	.header-in:after {
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
+		content: "";
+	}
+
+	#logo,
+	#navigation {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#logo {
+		margin-bottom: 0;
+		font-family: 'Julius Sans One', sans-serif;
+		padding-left: 5px;
+		margin: 0;
+	}
+	#logo a{
+		outline: none;
+	    background: transparent;
+		vertical-align: baseline;
+		text-decoration: none;
+		color: #fff;
+	}
+	#logo_img {
+		float: left;
+		margin-top: 10px;
+		margin-left: 20px;
+	}
+	#header .login {
+		cursor:pointer;
+	}
+/* --------------Main Navigation----------------- */
+	.navigation > ul > li {
+		position: relative; 
+		display: block;
+		float: left;
+		width: 120px;
+	}
+	.navigation > ul > li > a,
+	.navigation > ul > li > div {
+		text-align: center;
+		display: block;
+		padding: 20px 0px 25px;
+		color: #73807F;
+		font-size: 14px;
+		line-height: 1em;
+	}
+	.navigation a,
+	.navigation div { 
+		font-weight: 300;
+		font-family: 'Roboto', sans-serif;
+	}
+	.navigation > ul > li:hover > a,
+	.navigation > ul > li:hover > div,
+	.navigation > ul > .current-menu-item > a,
+	.navigation > ul > .current_page_item > a,
+	.navigation > ul > .current-menu-item > div,
+	.navigation > ul > .current_page_item > div { 
+		background-color: rgba(60, 104, 98, 0.22);
+		color: #fff;
+		text-decoration: none;
+	}
+
+	
+	#nav li ul {line-height: 27px;left: -999em; width: 180px; position: absolute;}
+	#nav li ul li{float: left; background:rgba(0,0,0, .2); margin-left: -40px; z-index: 99; position: relative;}
+
+	#nav li ul a{display: block; width: 120px;text-align:center; padding-top: 15px; padding-bottom: 13px; overflow:hidden;}
+
+	#nav li ul a:link  {color:#666; text-decoration:none;}
+	#nav li ul a:visited  {color:#666;text-decoration:none;}
+	#nav li ul a:hover  {color:#F3F3F3;text-decoration:none;font-weight:normal;background:#51726D;}
+
+	#nav li:hover ul {left: auto;}
+	#nav li.sfhover ul {left: auto;}
+
+	#nav #SPAN_USER_ID{height: 60px;}
+
+
+
+#infoSet {
+	margin: 40px 0 0 0;
+	width: 476px;
+	text-align: center;
+	display: none;
+}
+
+#changePassword {
+	margin: 40px 0 0 0;
+	width: 476px;
+	display: none;
+	text-align: center;
+}
+
+#sharedFileManage {
+	margin: 40px 0 0 0;
+	display: none;
+	text-align: center;
+}
+}#searchTimesAnalysis {
+	display: none;
+	margin: 40px 0 0 0
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+#dataAnalysisShow {
+	margin: 15px 10px;
+	width: 820px;
+	height: 500px;
+}
+
+#frequencyAnalysis {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+#frequencyAnalysisShow {
+	margin: 15px 10px;
+	width: 820px;
+	height: 500px;
+}
+
+#timesMapAnalysis {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+#provinceCompare
+{
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+#mapAnalysisShow {
+	margin: 15px 10px;
+	width: 820px;
+	height: 500px;
+}
+
+#loginLogAnalysis {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+#loginLogAnalysisShow {
+	margin: 15px 10px;
+	width: 820px;
+	height: 500px;
+}
+#uploadLogAnalysis {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+#uploadLogAnalysisShow {
+	margin: 15px 10px;
+	width: 820px;
+	height: 500px;
+}  
+#downloadLogAnalysis {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+#downloadLogAnalysisShow {
+	margin: 15px 10px;
+	width: 820px;
+	height: 500px;
+}  
+#netSearchTimesAnalysisShow {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+#netLoginLogAnalysisShow {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+#netDownloadLogAnalysisShow {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+#netUploadLogAnalysisShow {
+	display: none;
+	margin: 40px 0 0 0;
+	width: 850px;
+	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	text-align: center;
+} 
+
+
+
+
+

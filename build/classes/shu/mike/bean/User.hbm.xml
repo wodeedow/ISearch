@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-8-17 19:49:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="shu.mike.bean.User" table="USER">
+        <id name="userUUID" type="java.lang.String">
+            <column name="USERUUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="sex" type="boolean">
+            <column name="SEX" />
+        </property>
+        <property name="organizations" type="java.lang.String">
+            <column name="ORGANIZATIONS" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="phoneNumber" type="java.lang.String">
+            <column name="PHONENUMBER" />
+        </property>
+        <property name="registerDate" type="java.util.Date">
+            <column name="REGISTERDATE" />
+        </property>
+        <property name="lastLoginDate" type="java.util.Date">
+            <column name="LASTLOGINDATE" />
+        </property>
+        <property name="deadLineDate" type="java.util.Date">
+            <column name="DEADLINEDATE" />
+        </property>
+        <property name="loginValidateCode" type="java.lang.String">
+            <column name="LOGINVALIDATECODE" />
+        </property>
+        <property name="salt" type="java.lang.String">
+            <column name="SALT" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="registerValidateCode" type="java.lang.String">
+            <column name="REGISTERVALIDATECODE" />
+        </property>
+        <property name="permissionLevel" type="java.lang.String">
+            <column name="PERMISSIONLEVEL" />
+        </property>
+        <property name="isVerified" type="boolean" access="field">
+            <column name="ISVERIFIED" />
+        </property>
+        <property name="maxCapacity" type="int">
+            <column name="MAXCAPACITY" />
+        </property>
+        <property name="usedCapacity" type="int">
+            <column name="USEDCAPACITY" />
+        </property>
+        <property name="notTrack" type="boolean">
+            <column name="NOTTRACK" />
+        </property>
+    </class>
+</hibernate-mapping>
